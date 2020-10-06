@@ -29,11 +29,20 @@
        determinato il clic su un annuncio.",
    ],
  ];
-
-foreach ($faqs as $faq) {
-  foreach ($faq as $key => $value) {
-    echo $value."<br>";
-  }
-}
-
 ?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Google Faq</title>
+  </head>
+  <body>
+    <?php foreach ($faqs as $faq) { ?>
+      <h2><?php echo $faq["question"]; ?></h2>
+      <p><?php echo$faq["answre"]; ?></p>
+    <?php } ?>
+
+
+
+  </body>
+</html>
