@@ -35,14 +35,31 @@
   <head>
     <meta charset="utf-8">
     <title>Google Faq</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <?php foreach ($faqs as $faq) { ?>
-      <h2><?php echo $faq["question"]; ?></h2>
-      <p><?php echo$faq["answre"]; ?></p>
-    <?php } ?>
-
-
-
+    <header>
+      <div class="header_top">
+        <img src="img/google-azioni.jpg" alt="logo">
+        <span>Privacy e termini</span>
+      </div>
+      <div class="header_bottom">
+        <ul>
+          <li>Introduzione</li>
+          <li>Norme sulla privacy</li>
+          <li>Termini di servizio</li>
+          <li>Tecnologie</li>
+          <li>Domande frequenti</li>
+        </ul>
+      </div>
+    </header>
+    <hr>
+    <div class="container">
+      <?php foreach ($faqs as $faq) { ?>
+        <h3><?php echo $faq["question"]; ?></h3>
+        <p><?php echo$faq["answre"]; ?></p>
+      <?php } ?>
+    </div>
   </body>
 </html>
